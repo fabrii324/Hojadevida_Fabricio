@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get(
 
 # ✅ DEBUG
 DEBUG = True
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".onrender.com"]
 
 # ✅ Render hostname automático
 RENDER_HOST = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
@@ -141,6 +141,8 @@ USE_TZ = True
 # ==========================================================
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # ==========================================================
 # ✅ CLOUDINARY (MEDIA)
